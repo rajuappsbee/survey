@@ -41,8 +41,10 @@
       <div class="checkbox">
         <div class="togglebutton">
            <label class="left_15">
-            No &nbsp; <input type="checkbox" checked name="answer1"> &nbsp; Yes
+            No &nbsp; <input type="checkbox" name="answer1"> &nbsp; Yes
           </label>
+          <div class="clr20"></div>
+          <input type="text" class="custom_box" placeholder="give a comment" name="answer11">
         </div>
       </div>
           
@@ -70,7 +72,7 @@
       <div class="checkbox">
         <div class="togglebutton">
            <label class="left_15">
-            No &nbsp; <input type="checkbox" checked name="answer3"> &nbsp; Yes
+            No &nbsp; <input type="checkbox" name="answer3"> &nbsp; Yes
           </label>
         </div>
       </div>
@@ -161,9 +163,11 @@
                   </div>
                   <span class="adderrormsg error_msg" style="display:none;"></span>
                   
-                  <div class="g-recaptcha" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
 
                   <button type="button" class="btn btn-raised btn_1 pull-right" id="submbtn" onClick="checkValidForm();">Submit</button>
+
+                  <div class="g-recaptcha pull-right" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
+                  
                   <div class="clr20"></div>
               </div>
           </div>
