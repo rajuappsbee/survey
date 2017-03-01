@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+body{ background:#fff;font-family: 'Roboto Condensed', sans-serif;}
+.clr20{ clear: both; height:20px;}
+.qa_page label{ padding-right:30px;}
+.left_15{ margin-left:15px;}
+.header{ width:100%; padding:10px 0; background:#fff; box-shadow:#999 0 2px 5px; text-align:center;}
+.qa_page h2{ font-size:20px; margin-top:50px; color:#2d2c2c;font-family: 'Roboto Condensed', sans-serif; font-weight:normal;}
+.aq_top h1{ color:#8ab5c2; font-size: 27px;font-family: 'Roboto Condensed', sans-serif; font-weight:normal; line-height:37px; text-align:center;}
+.container-fixed {  margin: 0 auto;  max-width: 1000px;}
+.btn_1{ background:#024253 !important; color:#fff !important;}
+.footer{ background:#001e27 url(../img/gift2.png)10px bottom no-repeat;}
+.aq_top{ background:#001f29; padding:10px;}
+.footer input{ color:#fff; font-weight:normal; font-family:Arial, Helvetica, sans-serif;}
+.footer h2{ margin:0; padding:0; width:100%;  padding-top:30px; color:#8ab5c2;}
+.qa_page h1{ font-size:20px;font-family: 'Roboto Condensed', sans-serif; color:#024253; line-height:30px;}
+.footer label{ color:#fff !important;}
+.custom_box{ padding:7px; border:#c7c5c5 solid 1px;margin-left:15px;}
+.otherans51{ padding:7px; border:#c7c5c5 solid 1px; width:50%; margin-left:15px;}
+.otherans51{ display:none;}
+.togglebutton label input[type="checkbox"]:checked + .toggle {background-color: rgba(2,66,83,.5);}
+.togglebutton label input[type="checkbox"]:checked + .toggle::after { background-color: #024253;}
+
+
+.checkbox label, .radio label, label { color: #024253;}
+.checkbox input[type="checkbox"]:checked + .checkbox-material .check, label.checkbox-inline input[type="checkbox"]:checked + .checkbox-material .check {
+    color: #024253; border-color: #024253;}
+.checkbox input[type="checkbox"]:checked + .checkbox-material .check::before, label.checkbox-inline input[type="checkbox"]:checked + .checkbox-material .check::before {color: #024253;	}	
+.radio input[type="radio"]:checked ~ .check, label.radio-inline input[type="radio"]:checked ~ .check {    background-color: #024253;}
+.radio input[type="radio"]:checked ~ .circle, label.radio-inline input[type="radio"]:checked ~ .circle {    border-color: #024253;}	
+.form-group.form-group-lg .checkbox label, .form-group.form-group-lg .radio label, .form-group.form-group-lg label {color: #024253;}	
+.m_top{margin-top: 25px;}
