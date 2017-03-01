@@ -161,7 +161,7 @@
                   </div>
                   <span class="adderrormsg error_msg" style="display:none;"></span>
                   
-                  <div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_SITE_KEY ?>"></div>
+                  <div class="g-recaptcha" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
 
                   <button type="button" class="btn btn-raised btn_1 pull-right" id="submbtn" onClick="checkValidForm();">Submit</button>
                   <div class="clr20"></div>
@@ -171,6 +171,8 @@
   </div>
 
 </form>
+<!-- google capcha -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <!-- Custom js -->
 <script src="js/custom.js"></script>
 <!-- Material Design for Bootstrap -->
