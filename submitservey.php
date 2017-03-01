@@ -24,6 +24,52 @@
     $answer7 = isset($_POST['answer7']) ? $_POST['answer7'] : '';
 
     mysql_query("INSERT INTO `survey` (`name`, `email`, `phone`, `address`, `answer1`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `created`) VALUES ('".$name."', '".$email."', '".$phone."', '".$address."', '".$answer1."', '".$answer2."', '".$answer3."', '".$answer4."', '".$answer5."', '".$answer6."', '".$answer7."', NOW())");
+
+
+    /*
+
+    if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) { 
+                $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . RECAPTCHA_SECRET_KEY . '&response=' . $_POST['g-recaptcha-response']);
+                $responseData   = json_decode($verifyResponse);
+                if ($responseData->success) {
+
+                    $name    = !empty($_POST['name']) ? $_POST['name'] : '';
+                    $email   = !empty($_POST['email']) ? $_POST['email'] : '';
+                    $message = !empty($_POST['message']) ? $_POST['message'] : '';
+
+                    $to          = 'soumen@healthonmobile.in';
+                    $subject     = 'New contact form have been submitted';
+                    $htmlContent = "
+                    <h1>Contact Request Details</h1>
+                    <p><b>Name: </b>" . $name . "</p>
+                    <p><b>Email: </b>" . $email . "</p>
+                    <p><b>Message: </b>" . $message . "</p>
+                    ";
+
+                    $headers = "MIME-Version: 1.0" . "\r\n";
+                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+                    $headers .= 'From:' . $name . ' <' . $email . '>' . "\r\n";
+                    
+                    @mail($to, $subject, $htmlContent, $headers);
+                    $succMsg = 'Your contact request have submitted successfully.';
+                    $this->session->set_flashdata('sucess', $succMsg);
+
+                    redirect('/', 'refresh');
+                } else {
+
+                    $errMsg = 'Robot verification failed, please try again.';
+                    $this->session->set_flashdata('error', $errMsg);
+                    redirect('/#opps', 'refresh');
+                }
+            } else {
+
+                $errMsg = 'Please click on the reCAPTCHA box.';
+                $this->session->set_flashdata('error', $errMsg);
+                redirect('/#opps', 'refresh');
+            }
+    
+    */
 ?>
 
 

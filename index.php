@@ -51,13 +51,13 @@
       <h2>2. Would you use online video call facility to connect a specialist in order to get a second opinion for any critical disease ?</h2>
       <div class="radio radio-primary">
         <label>
-          <input name="answer2" id="optionsRadios1" value="Yes" checked="" type="radio">
+          <input name="answer2" id="optionsRadios1" value="Yes" type="radio">
           Yes
         </label>
       </div>
       <div class="radio radio-primary">
         <label>
-          <input name="answer2" id="optionsRadios2" value="No" type="radio">
+          <input name="answer2" id="optionsRadios2" value="No" checked type="radio">
           No
         </label>
       </div>
@@ -167,7 +167,7 @@
                   <button type="button" class="btn btn-raised btn_1 pull-right" id="submbtn" onClick="checkValidForm();">Submit</button>
 
                   <div class="g-recaptcha pull-right" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
-                  
+
                   <div class="clr20"></div>
               </div>
           </div>
