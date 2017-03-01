@@ -1,3 +1,5 @@
+var baseUrl = window.location.protocol + "//" + window.location.host + "/" +  window.location.pathname + "/";
+
 function checkValidForm(){
 	var name = $('#name').val();
 	var email = $('#email').val();
@@ -5,7 +7,7 @@ function checkValidForm(){
 	var address = $('#address').val();
 	//$('#submbtn').attr('disabled',true);
 
-	if(name && email && phone && address){
+	if(name && email && phone && address && isEmail(email) && isPhoneNumber(phone)){
 		$('form[name=serveyData]').submit();
 	}else{
 		$('.nameerrormsg').hide();
@@ -21,63 +23,41 @@ function checkValidForm(){
 		}else if(!address){
 			$('.adderrormsg').html('Please enter address.').show();
 		}
+
+
+		if(!isEmail(email)){
+			$('.emlerrormsg').html('Please enter valid email id.').show();
+		}
+
+		if(!isPhoneNumber(phone)){
+			$('.phnerrormsg').html('Please enter 10 digit phone number.').show();
+		}
 	}
 }
 
-$(document).on('keyup','#email',function(e){
+$(document).on('change','#email',function(e){
 	e.preventDefault();
 	var email = $('#email').val();
 	if(!isEmail(email)){
 		$('.emlerrormsg').html('Please enter valid email id.').show();
-		$('#submbtn').attr('disabled',true);
+		//$('#submbtn').attr('disabled',true);
 	}else{
 		$('.emlerrormsg').hide();
-		$.ajax({
-            type: "POST",
-            dataType: 'json',
-            data: {'email' : email},
-            url: '/survey/services.php?action=checkUniqueEmail',
-            success: function(res) {
-              if(!res.status){
-              	$('.emlerrormsg').html(res.message).show();
-				$('#submbtn').attr('disabled',true);
-              }else{
-              	$('.emlerrormsg').hide();
-				//$('#submbtn').attr('disabled',false);
-				validatePhone();
-              }
-            }
-      	});
 	}
 });
 
-$(document).on('keyup','#phone',function(e){
+$(document).on('change','#phone',function(e){
 	e.preventDefault();
 	var phone = $('#phone').val();
 	if(!isPhoneNumber(phone)){
 		$('.phnerrormsg').html('Please enter valid phone number.').show();
-		$('#submbtn').attr('disabled',true);
+		//$('#submbtn').attr('disabled',true);
 	}else{
 		$('.phnerrormsg').hide();
-		$.ajax({
-            type: "POST",
-            dataType: 'json',
-            data: {'phone' : phone},
-            url: '/survey/services.php?action=checkUniquePhone',
-            success: function(res) {
-              if(!res.status){
-              	$('.phnerrormsg').html(res.message).show();
-				$('#submbtn').attr('disabled',true);
-              }else{
-              	$('.phnerrormsg').hide();
-				//$('#submbtn').attr('disabled',false);
-				validateEmail();
-              }
-            }
-      	});
 	}
 });
 
+/*
 //email checking
 function validateEmail(){
 	var email = $('#email').val();
@@ -129,7 +109,7 @@ function validatePhone(){
       	});
 	}
 }
-
+*/
 //email validation
 function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;

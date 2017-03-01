@@ -1,6 +1,3 @@
-<?php 
-    //require('db/dbcon.php');
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -38,7 +35,7 @@
 <div class="clr20"></div> 
   <div class="container qa_page">
     
-     <h1>According to study, most of the doctor visits can be done safely through  online video call (telemedicince) with doctor specially, first doctor visit or follow up visits which is not an emergency. We want to know your views on this.</h1>
+     <h1>According to study, most of the doctor visits can be done safely through  online video call (telemedicince) with doctor specially for first doctor visit or follow up visits which is not an emergency. We want to know your views on this.</h1>
 
       <h2>1. Are you comfortable consulting a doctor online through a video call for your first visit or a follow up visit ?</h2>
       <div class="checkbox">
@@ -138,7 +135,7 @@
                   <label class="control-label" for="inputLarge">Name :</label>
                   <input class="form-control input-lg" id="name" name="name" type="text" required="true">
                   </div>
-                  <span class="nameerrormsg" style="display:none;"></span>
+                  <span class="nameerrormsg error_msg" style="display:none;"></span>
               </div>
               
               <div class="col-lg-4">
@@ -146,7 +143,7 @@
                     <label class="control-label" for="inputLarge">Email:</label>
                     <input class="form-control input-lg" id="email" name="email" type="email" required="true">
                   </div>
-                  <span class="emlerrormsg" style="display:none;"></span>
+                  <span class="emlerrormsg error_msg" style="display:none;"></span>
               </div>
               
               <div class="col-lg-4">
@@ -154,7 +151,7 @@
                     <label class="control-label" for="inputLarge">Phone:</label>
                     <input class="form-control input-lg" id="phone" name="phone" type="tel" pattern="[789][0-9]{9}" required="true">
                   </div>
-                  <span class="phnerrormsg" style="display:none;"></span>
+                  <span class="phnerrormsg error_msg" style="display:none;"></span>
               </div>
               
               <div class="col-lg-12">
@@ -162,8 +159,10 @@
                   <label class="control-label" for="inputLarge">Address :</label>
                   <input class="form-control input-lg" id="address" name="address" type="text">
                   </div>
-                  <span class="adderrormsg" style="display:none;"></span>
+                  <span class="adderrormsg error_msg" style="display:none;"></span>
                   
+                  <div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_SITE_KEY ?>"></div>
+
                   <button type="button" class="btn btn-raised btn_1 pull-right" id="submbtn" onClick="checkValidForm();">Submit</button>
                   <div class="clr20"></div>
               </div>

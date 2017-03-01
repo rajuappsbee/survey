@@ -21,7 +21,7 @@ body{ background:#fff;font-family: 'Roboto Condensed', sans-serif;}
 .otherans51{ display:none;}
 .togglebutton label input[type="checkbox"]:checked + .toggle {background-color: rgba(2,66,83,.5);}
 .togglebutton label input[type="checkbox"]:checked + .toggle::after { background-color: #024253;}
-
+.error_msg{ color:#fc281e !important;}
 
 .checkbox label, .radio label, label { color: #024253;}
 .checkbox input[type="checkbox"]:checked + .checkbox-material .check, label.checkbox-inline input[type="checkbox"]:checked + .checkbox-material .check {
