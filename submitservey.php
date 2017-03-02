@@ -16,6 +16,8 @@
 
             $answer1 = isset($_POST['answer1']) ? 'Yes' : 'No';
 
+            $answer11 = isset($_POST['answer11']) ? $_POST['answer11'] : '';
+
             $answer2 = isset($_POST['answer2']) ? $_POST['answer2'] : '';
 
             $answer3 = isset($_POST['answer3']) ? 'Yes' : 'No';
@@ -28,7 +30,7 @@
 
             $answer7 = isset($_POST['answer7']) ? $_POST['answer7'] : '';
 
-            mysql_query("INSERT INTO `survey` (`name`, `email`, `phone`, `address`, `answer1`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `created`) VALUES ('".$name."', '".$email."', '".$phone."', '".$address."', '".$answer1."', '".$answer2."', '".$answer3."', '".$answer4."', '".$answer5."', '".$answer6."', '".$answer7."', NOW())");
+            mysql_query("INSERT INTO `survey` (`name`, `email`, `phone`, `address`, `answer1`, `answer1_comment`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `created`) VALUES ('".$name."', '".$email."', '".$phone."', '".$address."', '".$answer1."', '".$answer11."', '".$answer2."', '".$answer3."', '".$answer4."', '".$answer5."', '".$answer6."', '".$answer7."', NOW())");
 
 ?>
 
