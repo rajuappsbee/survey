@@ -1,75 +1,35 @@
 <?php 
     require('db/dbcon.php');
 
-    $name = isset($_POST['name']) ? $_POST['name'] : '';
-
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-
-    $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
-
-    $address = isset($_POST['address']) ? $_POST['address'] : '';
-
-    $answer1 = isset($_POST['answer1']) ? 'Yes' : 'No';
-
-    $answer2 = isset($_POST['answer2']) ? $_POST['answer2'] : '';
-
-    $answer3 = isset($_POST['answer3']) ? 'Yes' : 'No';
-
-    $answer4 = isset($_POST['answer4']) ? $_POST['answer4'] : '';
-
-    $answer5 = isset($_POST['answer5']) ? ( ($_POST['answer5'] == 'other') ? $_POST['answer51'] : $_POST['answer5'] ) : '';
-
-    $answer6 = isset($_POST['answer6']) ? $_POST['answer6'] : '';
-
-    $answer7 = isset($_POST['answer7']) ? $_POST['answer7'] : '';
-
-    mysql_query("INSERT INTO `survey` (`name`, `email`, `phone`, `address`, `answer1`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `created`) VALUES ('".$name."', '".$email."', '".$phone."', '".$address."', '".$answer1."', '".$answer2."', '".$answer3."', '".$answer4."', '".$answer5."', '".$answer6."', '".$answer7."', NOW())");
-
-
-    /*
-
     if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) { 
-                $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . RECAPTCHA_SECRET_KEY . '&response=' . $_POST['g-recaptcha-response']);
-                $responseData   = json_decode($verifyResponse);
-                if ($responseData->success) {
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6LcLUBcUAAAAAEtqQszbJsmjhlg2C_mpFMvoif3a&response=' . $_POST['g-recaptcha-response']);
+        $responseData   = json_decode($verifyResponse);
+        if ($responseData->success) {
 
-                    $name    = !empty($_POST['name']) ? $_POST['name'] : '';
-                    $email   = !empty($_POST['email']) ? $_POST['email'] : '';
-                    $message = !empty($_POST['message']) ? $_POST['message'] : '';
+            $name = isset($_POST['name']) ? $_POST['name'] : '';
 
-                    $to          = 'soumen@healthonmobile.in';
-                    $subject     = 'New contact form have been submitted';
-                    $htmlContent = "
-                    <h1>Contact Request Details</h1>
-                    <p><b>Name: </b>" . $name . "</p>
-                    <p><b>Email: </b>" . $email . "</p>
-                    <p><b>Message: </b>" . $message . "</p>
-                    ";
+            $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-                    $headers = "MIME-Version: 1.0" . "\r\n";
-                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 
-                    $headers .= 'From:' . $name . ' <' . $email . '>' . "\r\n";
-                    
-                    @mail($to, $subject, $htmlContent, $headers);
-                    $succMsg = 'Your contact request have submitted successfully.';
-                    $this->session->set_flashdata('sucess', $succMsg);
+            $address = isset($_POST['address']) ? $_POST['address'] : '';
 
-                    redirect('/', 'refresh');
-                } else {
+            $answer1 = isset($_POST['answer1']) ? 'Yes' : 'No';
 
-                    $errMsg = 'Robot verification failed, please try again.';
-                    $this->session->set_flashdata('error', $errMsg);
-                    redirect('/#opps', 'refresh');
-                }
-            } else {
+            $answer2 = isset($_POST['answer2']) ? $_POST['answer2'] : '';
 
-                $errMsg = 'Please click on the reCAPTCHA box.';
-                $this->session->set_flashdata('error', $errMsg);
-                redirect('/#opps', 'refresh');
-            }
-    
-    */
+            $answer3 = isset($_POST['answer3']) ? 'Yes' : 'No';
+
+            $answer4 = isset($_POST['answer4']) ? $_POST['answer4'] : '';
+
+            $answer5 = isset($_POST['answer5']) ? ( ($_POST['answer5'] == 'other') ? $_POST['answer51'] : $_POST['answer5'] ) : '';
+
+            $answer6 = isset($_POST['answer6']) ? $_POST['answer6'] : '';
+
+            $answer7 = isset($_POST['answer7']) ? $_POST['answer7'] : '';
+
+            mysql_query("INSERT INTO `survey` (`name`, `email`, `phone`, `address`, `answer1`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `created`) VALUES ('".$name."', '".$email."', '".$phone."', '".$address."', '".$answer1."', '".$answer2."', '".$answer3."', '".$answer4."', '".$answer5."', '".$answer6."', '".$answer7."', NOW())");
+
 ?>
 
 
@@ -113,3 +73,18 @@
 </script>
 </body>
 </html>
+
+<?php
+      } else {
+        $errMsg = 'Robot verification failed, please try again.';
+        $_SESSION['errMsg'] = $errMsg;
+        //header("location:javascript://history.go(-1)");
+        echo "<script>window.history.go(-1);</script>";
+      }
+  } else {
+      $errMsg = 'Please click on the reCAPTCHA box.';
+      $_SESSION['errMsg'] = $errMsg;
+      //header("location:javascript://history.go(-1)");
+      echo "<script>window.history.go(-1);</script>";
+  }
+?>

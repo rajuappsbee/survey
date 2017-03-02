@@ -1,4 +1,5 @@
 <?php
+  session_start();
   $dbhost = '192.168.0.1';
   $dbuser = 'root';
   $dbpass = 'redhat456';

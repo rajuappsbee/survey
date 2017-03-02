@@ -1,3 +1,7 @@
+<?php
+    require('db/dbcon.php');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +36,7 @@
     
 
 <form name="serveyData" method="post" action="submitservey.php">
-<div class="clr20"></div> 
+  <div class="clr20"></div> 
   <div class="container qa_page">
     
      <h1>According to study, most of the doctor visits can be done safely through  online video call (telemedicince) with doctor specially for first doctor visit or follow up visits which is not an emergency. We want to know your views on this.</h1>
@@ -163,7 +167,15 @@
                   </div>
                   <span class="adderrormsg error_msg" style="display:none;"></span>
                   
-
+                  <?php 
+                    if(!empty($_SESSION['errMsg'])){
+                  ?>
+                      <span class="capchaerrormsg error_msg"><?php echo $_SESSION['errMsg']; ?></span>
+                  <?php
+                      session_destroy();
+                    }
+                  ?>
+                  
                   <button type="button" class="btn btn-raised btn_1 pull-right" id="submbtn" onClick="checkValidForm();">Submit</button>
 
                   <div class="g-recaptcha pull-right" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
