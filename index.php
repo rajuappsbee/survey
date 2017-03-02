@@ -167,18 +167,19 @@
                   </div>
                   <span class="adderrormsg error_msg" style="display:none;"></span>
                   
-                  <?php 
-                    if(!empty($_SESSION['errMsg'])){
-                  ?>
-                      <span class="capchaerrormsg error_msg"><?php echo $_SESSION['errMsg']; ?></span>
-                  <?php
-                      session_destroy();
-                    }
-                  ?>
-                  
                   <button type="button" class="btn btn-raised btn_1 pull-right" id="submbtn" onClick="checkValidForm();">Submit</button>
 
-                  <div class="g-recaptcha pull-right" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
+                  <div class="pull-right">
+                      <?php 
+                        if(!empty($_SESSION['errMsg'])){
+                      ?>
+                          <span class="capchaerrormsg error_msg"><?php echo $_SESSION['errMsg']; ?></span>
+                      <?php
+                          session_destroy();
+                        }
+                      ?>
+                      <div class="g-recaptcha" data-sitekey="6LcLUBcUAAAAAGcgiI78eFOvbT7iuJbLR7vgWi6j"></div>
+                  </div>
 
                   <div class="clr20"></div>
               </div>
