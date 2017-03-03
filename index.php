@@ -48,10 +48,9 @@
             No &nbsp; <input type="checkbox" name="answer1"> &nbsp; Yes
           </label>
           <div class="clr20"></div>
-          <div class="clr20"></div>
-          <input type="text" class="custom_box" placeholder="give a comment" name="answer11">
         </div>
       </div>
+      <input type="text" class="custom_box" placeholder="give a comment" name="answer11">
           
       <h2>2. Would you use online video call facility to connect a specialist in order to get a second opinion for any critical disease ?</h2>
       <div class="radio radio-primary">
