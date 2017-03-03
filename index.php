@@ -48,6 +48,7 @@
             No &nbsp; <input type="checkbox" name="answer1"> &nbsp; Yes
           </label>
           <div class="clr20"></div>
+          <div class="clr20"></div>
           <input type="text" class="custom_box" placeholder="give a comment" name="answer11">
         </div>
       </div>
@@ -114,7 +115,7 @@
       <div class="radio radio-primary">
         <label class="otherans5">
           <input name="answer5" value="other" type="radio">
-          other (please specify box)
+          others
         </label>
         <div class="clr20"></div>
         <input type="text" class="otherans51" name="answer51" placeholder="Please specify here">
