@@ -37,12 +37,12 @@
         <div class="header">
         	<div class="container">
         		<a href="#"><img src="img/logo.png" /></a>
-            </div>
+          </div>
         </div>
         
         <!-- <div class="container"> -->
         <div class="col-lg-12 m_top">
-          <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+          <table class="table table-striped table-bordered table-hover" id="dataTablesFirst">
               <thead>
                 <tr>
                   <th>Answer1</th>
@@ -64,6 +64,7 @@
                 $query = mysql_query("SELECT * FROM `survey`");
                 if(mysql_num_rows($query)>0){
                   while($results = mysql_fetch_assoc($query)){
+
                   ?>
                     <tr>
                       <td>
@@ -105,10 +106,9 @@
       $.material.init();
 
       $(document).ready(function() {
-        $('#dataTables-example').DataTable({
+        $('#dataTablesFirst').DataTable({
             responsive: true
         });
-        /*$('#dataTables-example').parents('.row').eq(0).css({"height" : "410px", "overflow-x" : "hidden", "overflow-y" : "scroll"});*/
       });
     </script>
     </html>
