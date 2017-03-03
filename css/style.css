@@ -16,8 +16,8 @@ body{ background:#fff;font-family: 'Roboto Condensed', sans-serif;}
 .footer h2{ margin:0; padding:0; width:100%;  padding-top:30px; color:#8ab5c2;}
 .qa_page h1{ font-size:20px;font-family: 'Roboto Condensed', sans-serif; color:#024253; line-height:30px;}
 .footer label{ color:#fff !important;}
-.custom_box{ padding:7px; border:#c7c5c5 solid 1px;margin-left:15px;}
-.otherans51{ padding:7px; border:#c7c5c5 solid 1px; width:50%; margin-left:15px;}
+.custom_box{ padding:7px; border:#c7c5c5 solid 1px;margin-left:15px;width:40%; height:70px;}
+.otherans51{ padding:7px; border:#c7c5c5 solid 1px; width:40%; margin-left:15px; height:70px;}
 .otherans51{ display:none;}
 .togglebutton label input[type="checkbox"]:checked + .toggle {background-color: rgba(2,66,83,.5);}
 .togglebutton label input[type="checkbox"]:checked + .toggle::after { background-color: #024253;}

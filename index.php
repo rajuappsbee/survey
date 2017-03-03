@@ -49,7 +49,7 @@
           </label>
         </div>
       </div>
-      <input type="text" class="custom_box" placeholder="give a comment" name="answer11">
+      <input type="text" class="custom_box" placeholder="comment" name="answer11">
           
       <h2>2. Would you use online video call facility to connect a specialist in order to get a second opinion for any critical disease ?</h2>
       <div class="radio radio-primary">
@@ -82,7 +82,7 @@
 
       <h2>4. Normally how frequently do you visit a doctor for you or your family ?</h2>
      
-        <input type="text" class="custom_box" placeholder="10 times in a year" name="answer4">
+        <input type="text" class="custom_box" placeholder="for example 10 times in a year" name="answer4">
       
       
       <h2>5. For what medical reasons do you mostly need to consult a doctor ?</h2>
@@ -121,12 +121,12 @@
       
       <h2>6. How much do you normally pay to a doctor for one time consultation ?</h2>
       <div class="radio radio-primary">
-        <input id="answer6" class="custom_box" name="answer6" type="text" placeholder="upto INR 1000">
+        <input id="answer6" class="custom_box" name="answer6" type="text" placeholder="for example INR 1000">
       </div>
 
       <h2>7. If you Could Consult a doctor online from the Convenience of your home/office/your preferred location, what amount would you be comfortable to spend ?</h2>
       <div class="radio radio-primary">
-        <input id="answer7" class="custom_box" name="answer7" type="text" placeholder="INR 500 to INR 1000">
+        <input id="answer7" class="custom_box" name="answer7" type="text" placeholder="for example INR 500 to INR 1000">
       </div>
   </div>
  <div class="clr20"></div> <div class="clr20"></div> <div class="clr20"></div> 
