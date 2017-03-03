@@ -105,13 +105,14 @@
     <script>
       $.material.init();
 
+      //datatables plugin integrate
       $(document).ready(function() {
         $('#dataTablesFirst').DataTable({
             responsive: true
         });
       });
     </script>
-    </html>
+  </html>
 
 <?php 
   } else {
