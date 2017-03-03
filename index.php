@@ -47,7 +47,6 @@
            <label class="left_15">
             No &nbsp; <input type="checkbox" name="answer1"> &nbsp; Yes
           </label>
-          <div class="clr20"></div>
         </div>
       </div>
       <input type="text" class="custom_box" placeholder="give a comment" name="answer11">
