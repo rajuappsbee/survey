@@ -22,7 +22,8 @@
 <body>
     <div class="header">
     	<div class="container">
-    		<a href="#"><img src="img/logo.png" /></a>
+        <!--<a href="javascript:void(0);"><img src="img/logo.png" /></a>-->
+    		<h3 style="color:#001f29;">HEY BANGALURU</h3>
         </div>
     </div>
     <div class="aq_top">
