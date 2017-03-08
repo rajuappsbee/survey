@@ -54,8 +54,9 @@
 <body>
     <div class="header">
       <div class="container">
-        <a href="#"><img src="img/logo.png" /></a>
-        </div>
+        <!--<a href="javascript:void(0);"><img src="img/logo.png" /></a>-->
+        <h3 class="hey_text">HEY BANGALURU</h3>
+      </div>
     </div>
 
   <div class="container-fixed qa_page">

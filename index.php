@@ -22,9 +22,10 @@
 <body>
     <div class="header">
     	<div class="container">
-        <a href="javascript:void(0);"><img src="img/logo.png" /></a>
+        <!--<a href="javascript:void(0);"><img src="img/logo.png" /></a>-->
+    		<h3 class="hey_text">HEY BANGALURU</h3>
         </div>
-    </div>
+    
     <div class="aq_top">
     	<div class="container">
         <h1>
@@ -32,7 +33,7 @@
         </h1>
     </div>
     </div>
-    
+    </div>
     
 
 <form name="serveyData" method="post" action="submitservey.php">
