@@ -16,11 +16,14 @@ function checkValidForm(){
 		$('.adderrormsg').hide();
 		if(!name){
 			$('.nameerrormsg').html('Please enter your name.').show();
-		}else if(!email){
+		}
+		if(!email){
 			$('.emlerrormsg').html('Please enter your email.').show();
-		}else if(!phone){
+		}
+		if(!phone){
 			$('.phnerrormsg').html('Please enter your phone number.').show();
-		}else if(!address){
+		}
+		if(!address){
 			$('.adderrormsg').html('Please enter address.').show();
 		}
 
@@ -54,6 +57,26 @@ $(document).on('change','#phone',function(e){
 		//$('#submbtn').attr('disabled',true);
 	}else{
 		$('.phnerrormsg').hide();
+	}
+});
+$(document).on('change','#name',function(e){
+	e.preventDefault();
+	var name = $('#name').val();
+	if(name && (name != '')){
+		$('.nameerrormsg').hide();
+	}else{
+		$('.nameerrormsg').html('Please enter your name.').show();
+		//$('#submbtn').attr('disabled',true);
+	}
+});
+
+$(document).on('change','#address',function(e){
+	e.preventDefault();
+	var address = $('#address').val();
+	if(address && (address != '')){
+		$('.adderrormsg').hide();
+	}else{
+		$('.adderrormsg').html('Please enter address.').show();
 	}
 });
 
