@@ -55,7 +55,7 @@
     <div class="header">
       <div class="container">
         <!--<a href="javascript:void(0);"><img src="img/logo.png" /></a>-->
-        <h3 class="hey_text">HEY BANGALURU</h3>
+        <h3 class="hey_text">HEY BENGALURU</h3>
       </div>
     </div>
 
