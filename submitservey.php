@@ -54,10 +54,10 @@
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
             // More headers
-            $headers .= 'From: <noreply@localdoctors.in>' . "\r\n";
+            $headers .= 'From: noreply@localdoctors.in' . "\r\n";
             $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";
 
-            print_r(mail($to,$subject,$message,$headers));
+            mail($to,$subject,$message,$headers);
 
 ?>
 
