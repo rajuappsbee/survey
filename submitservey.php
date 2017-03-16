@@ -1,5 +1,4 @@
 <?php 
-ini_set('display_errors',1);
     require('db/dbcon.php');
 
     if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) { 
@@ -37,7 +36,7 @@ ini_set('display_errors',1);
             $to = $email;
             $subject = "Thanks for your participation";
 
-            /*$message = "<html>
+            $message = "<html>
             <head>
             <title>Thanks for your participation</title>
             </head>
@@ -48,23 +47,18 @@ ini_set('display_errors',1);
             <p>Subhankar Saha</p>
             <p>Survey Manager</p>
             </body>
-            </html>";*/
-            $message = "Test message";
+            </html>";
+
             // Always set content-type when sending HTML email
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
             // More headers
-            /*$headers .= 'From: noreply@localdoctors.in' . "\r\n";
-            $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";*/
-            $headers .= "From: noreply@localdoctors.in" . "\r\n";
+            $headers .= 'From: noreply@localdoctors.in' . "\r\n";
+            $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";
+            $headers = "From: noreply@localdoctors.in" . "\r\n";
 
-            $mail = mail($to,$subject,$message);
-            if($mail){
-              echo "Thank you for using our mail form";
-            }else{
-              echo "Mail sending failed."; 
-            }
+            mail($to,$subject,$message,$headers);
 
 ?>
 
