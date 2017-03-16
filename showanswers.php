@@ -46,6 +46,7 @@
           <table class="table table-striped table-bordered table-hover" id="dataTablesFirst">
               <thead>
                 <tr>
+                  <th style="display:none;">Serial No.</th>
                   <th>Answer1</th>
                   <th>Answer2</th>
                   <th>Answer3</th>
@@ -62,12 +63,16 @@
               <tbody>
 
               <?php
-                $query = mysql_query("SELECT * FROM `survey`");
+                $query = mysql_query("SELECT * FROM `survey` ORDER BY `id` DESC");
                 if(mysql_num_rows($query)>0){
+                  $i =0;
                   while($results = mysql_fetch_assoc($query)){
-
+                    $i ++;
                   ?>
                     <tr>
+                      <td style="display:none;">
+                        <?php echo $i; ?>
+                      </td>
                       <td>
                         <?php echo $results['answer1']; ?><br />
                         Comment : <?php echo $results['answer1_comment']; ?>
