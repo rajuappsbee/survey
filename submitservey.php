@@ -36,8 +36,7 @@
             $to = $email;
             $subject = "Thanks for your participation";
 
-            $message = "
-            <html>
+            $message = "<html>
             <head>
             <title>Thanks for your participation</title>
             </head>
@@ -48,8 +47,7 @@
             <p>Subhankar Saha</p>
             <p>Survey Manager</p>
             </body>
-            </html>
-            ";
+            </html>";
 
             // Always set content-type when sending HTML email
             $headers = "MIME-Version: 1.0" . "\r\n";
@@ -59,7 +57,7 @@
             $headers .= 'From: <noreply@localdoctors.in>' . "\r\n";
             $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";
 
-            mail($to,$subject,$message,$headers);
+            print_r(mail($to,$subject,$message,$headers));
 
 ?>
 
