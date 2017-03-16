@@ -58,7 +58,7 @@
             $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";*/
             $headers .= "From: noreply@localdoctors.in" . "\r\n";
 
-            mail($to,$subject,$message,$headers);
+            mail($to,$subject,$message);
 
 ?>
 
