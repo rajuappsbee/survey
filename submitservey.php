@@ -1,4 +1,5 @@
 <?php 
+ini_set('display_errors',1);
     require('db/dbcon.php');
 
     if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) { 
@@ -58,7 +59,12 @@
             $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";*/
             $headers .= "From: noreply@localdoctors.in" . "\r\n";
 
-            mail($to,$subject,$message);
+            $mail = mail($to,$subject,$message);
+            if($mail){
+              echo "Thank you for using our mail form";
+            }else{
+              echo "Mail sending failed."; 
+            }
 
 ?>
 
