@@ -50,7 +50,7 @@
           </label>
         </div>
       </div>
-      <input type="text" class="custom_box" placeholder="comment" name="answer11">
+      <input type="text" class="custom_box" placeholder="comment" name="answer11" style="width:40%; height:70px;">
           
       <h2>2. Would you use online video call facility to connect a specialist in order to get a second opinion for any critical disease ?</h2>
       <div class="radio radio-primary">

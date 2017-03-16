@@ -62,7 +62,7 @@
   <div class="container-fixed qa_page">
     <div class="clr20"></div>
     <div class="clr20"></div>
-    <center><h1>Thank you</h1></center>
+    <center><h1>Thank you for participating the survey. We will send you a free gift to your address.</h1></center>
   </div>
 
 </body>
