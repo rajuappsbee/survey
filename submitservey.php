@@ -47,6 +47,7 @@
             } else {
               echo 'Message has been sent.';
             }*/
+            $url = 'https://admin.healthonmobile.in/api/users/sendSurveyMail';
             $post = array(
                       'name' => $name,
                       'email' => $email,
