@@ -35,33 +35,6 @@
             mysql_query("INSERT INTO `survey` (`name`, `email`, `phone`, `address`, `answer1`, `answer1_comment`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `created`) VALUES ('".$name."', '".$email."', '".$phone."', '".$address."', '".$answer1."', '".$answer11."', '".$answer2."', '".$answer3."', '".$answer4."', '".$answer5."', '".$answer6."', '".$answer7."', NOW())");
 
             //email send to the user
-            /*$to = $email;
-            $subject = "Thanks for your participation";
-
-            $message = "<html>
-            <head>
-            <title>Thanks for your participation</title>
-            </head>
-            <body>
-            <p>Hi ".$name.",</p>
-            <p>Thank you very much for participating this survey. We will be happy to send you a free gift to your address mentioned on the Survey web page. We will call you to confirm your address before we send you the gift.</p>
-            <p>Thanks,</p>
-            <p>Subhankar Saha</p>
-            <p>Survey Manager</p>
-            </body>
-            </html>";
-
-            // Always set content-type when sending HTML email
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-            // More headers
-            $headers .= 'From: noreply@localdoctors.in' . "\r\n";
-            $headers .= 'Cc: noreply@localdoctors.in' . "\r\n";
-            $headers = "From: noreply@localdoctors.in" . "\r\n";
-
-            mail($to,$subject,$message,$headers);*/
-
             /*$mail = new PHPMailer;
             $mail->setFrom('noreply@localdoctors.in', 'noreply');
             $mail->addAddress($email, $name);
@@ -74,23 +47,20 @@
             } else {
               echo 'Message has been sent.';
             }*/
-
-            $mail = new PHPMailer();
-            $mail->setFrom('noreply@localdoctors.in', 'noreply@localdoctors.in');
-            $mail->addAddress($email, '');
-            $mail->addReplyTo('noreply@localdoctors.in', 'noreply@localdoctors.in');
-            
-            $mail->Subject = 'Thanks for your participation';
-            ob_start();
-            include_once('welcome_mail.php');
-            $body=ob_get_clean();
-            $mail->Body=$body;
-            $mail->IsHTML(true); 
-            if(!$mail->send()) {
-              //echo "Mailer Error: " . $mail->ErrorInfo;
-            } else {
-              //echo "Successfull";
-            }
+            $post = array(
+                      'name' => $name,
+                      'email' => $email,
+                      'subject' => 'Thanks for your participation',
+                      'message' => 'Thanks for your participation'
+                    );
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_USERPWD, "admin : 123456");
+            $result = curl_exec($ch);
+            curl_close($ch);
 
 ?>
 
