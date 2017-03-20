@@ -223,6 +223,16 @@
  	$('.otherans52').click(function(){
 		$('.otherans51').hide();
 	});
+
+$( '#submbtn' ).click(function() {
+fbq('track', 'AddToCart', {
+content_ids: ['1234'],
+content_type: 'product',
+value: 2.99,
+currency: 'USD'
+});
+});
+
 </script>
 </body>
 </html>
