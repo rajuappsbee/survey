@@ -70,6 +70,7 @@
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Address</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -124,6 +125,7 @@
                       <td><?php echo $results['email']; ?></td>
                       <td><?php echo $results['phone']; ?></td>
                       <td><?php echo $results['address']; ?></td>
+                      <td><a href="deletedata.php?rel=<?php echo base64_encode($results['id']); ?>">Delete</a></td>
                     </tr>
                   <?php
                   }
