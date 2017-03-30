@@ -125,7 +125,7 @@
                       <td><?php echo $results['email']; ?></td>
                       <td><?php echo $results['phone']; ?></td>
                       <td><?php echo $results['address']; ?></td>
-                      <td><a href="deletedata.php?rel=<?php echo base64_encode($results['id']); ?>">Delete</a></td>
+                      <td><a href="javascript:void(0);" onClick="deleteData(&quot;<?php echo base64_encode($results['id']); ?>&quot;);">Delete</a></td>
                     </tr>
                   <?php
                   }
@@ -181,6 +181,11 @@
             responsive: true
         });
       });
+      function deleteData(srvyid){
+        if(confirm("Are you sure you want to delete it?")){
+          location.href="deletedata.php?rel="+srvyid;
+        }
+      }
     </script>
   </html>
 
