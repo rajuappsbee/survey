@@ -42,8 +42,20 @@
         </div>
         
         <!-- <div class="container"> -->
-        <div class="col-lg-12 m_top">
-          <table class="table table-striped table-bordered table-hover" id="dataTablesFirst">
+        <?php 
+          $yes1 = 0;
+          $no1 = 0;
+
+          $yes2 = 0;
+          $no2 = 0;
+          $maybe2 = 0;
+
+          $yes3 = 0;
+          $no3 = 0;
+        ?>
+      <div class="maindiv" style="position:relative;">
+        <div class="col-lg-12 m_top" style="min-height: 750px; position: absolute; top: 130px;">
+          <table class="table table-striped table-bordered table-hover" id="dataTablesFirst" style="width:100%;">
               <thead>
                 <tr>
                   <th style="display:none;">Serial No.</th>
@@ -68,6 +80,31 @@
                   $i =0;
                   while($results = mysql_fetch_assoc($query)){
                     $i ++;
+
+                    if($results['answer1'] == 'Yes'){
+                      $yes1 ++;
+                    }
+                    if($results['answer1'] == 'No'){
+                      $no1 ++;
+                    }
+
+                    if($results['answer2'] == 'Yes'){
+                      $yes2 ++;
+                    }
+                    if($results['answer2'] == 'No'){
+                      $no2 ++;
+                    }
+                    if($results['answer2'] == 'May be'){
+                      $maybe2 ++;
+                    }
+
+                    if($results['answer3'] == 'Yes'){
+                      $yes3 ++;
+                    }
+                    if($results['answer3'] == 'No'){
+                      $no3 ++;
+                    }
+
                   ?>
                     <tr>
                       <td style="display:none;">
@@ -96,7 +133,32 @@
             </tbody>
           </table>
         </div>
+        <div class="col-lg-12 m_top" style="position: absolute; top: 0;">
+          <table class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>
+                    Answer1 : <br>
+                    Yes (<?php echo $yes1; ?>)<br>
+                    No (<?php echo $no1; ?>)
+                  </th>
+                  <th>
+                    Answer2 : <br>
+                    Yes (<?php echo $yes2; ?>)<br>
+                    No (<?php echo $no2; ?>)<br>
+                    May be (<?php echo $maybe2; ?>)
+                  </th>
+                  <th>
+                    Answer3 : <br>
+                    Yes (<?php echo $yes3; ?>)<br>
+                    No (<?php echo $no3; ?>)
+                  </th>
+                </tr>
+              </thead>
+          </table>
+        </div>
         <!-- </div> -->
+      </div>
     </body>
     <!-- Material Design for Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
