@@ -63,7 +63,7 @@
               <tbody>
 
               <?php
-                $query = mysql_query("SELECT * FROM `survey` ORDER BY `id` DESC");
+                $query = mysql_query("SELECT * FROM `survey` WHERE `is_deleted`= 0 ORDER BY `id` DESC");
                 if(mysql_num_rows($query)>0){
                   $i =0;
                   while($results = mysql_fetch_assoc($query)){
